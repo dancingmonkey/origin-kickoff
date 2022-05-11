@@ -1,0 +1,29 @@
+[[headers]]
+  for = "/assets/uploads/*"
+[headers.values]
+  Cache-Control = "public, max-age=5184000"
+[[headers]]
+  for = "/assets/images/**/*"
+[headers.values]
+  Cache-Control = "public, max-age=5184000"
+# Settings in the [build] context are global and are applied to
+# all contexts unless otherwise overridden by more specific contexts.
+[build]
+# Default build command.
+command = "echo 'default context'"
+publish = "_site"
+
+[context.production]
+command = "npm run build"
+environment = { JEKYLL_ENV = "production", NODE_ENV = 'production' }
+
+# Set this so google tag manager doesn't work on dev branch
+[context.branch-deploy]
+command = "npm run build"
+environment = { JEKYLL_ENV = "development", NODE_ENV = 'production' }
+
+[[headers]]
+for = "/assets/uploads/*"
+
+[headers.values]
+Cache-Control = "public, max-age=4838400"

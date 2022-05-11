@@ -1,0 +1,34 @@
+url: "" 
+baseurl: ""
+title: ""
+
+email:
+tagline:
+description:
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+google:
+
+timezone: Europe/Amsterdam
+
+collections:
+  projects:
+    sort_by:
+    output:
+    permalink:
+
+keep_files: [assets]
+
+exclude:
+  [
+    'node_modules',
+    'gulpfile.js',
+    'package.json',
+    'yarn.lock',
+    'package-lock.json',
+  ]
+
+disable_disk_cache: true

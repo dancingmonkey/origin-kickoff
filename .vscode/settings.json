@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/jekyll.json": "file:///Users/timothy/dev/hartslag-events.nl/_config.yml"
+  },
+  "yaml.validate": false,
+}

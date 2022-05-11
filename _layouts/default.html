@@ -1,0 +1,35 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang='{{ site.lang | default: "en-US" }}'>
+  <!--   
+Coded by timothycodes
+       _                  _                          _            
+   _  (_)             _  | |                        | |           
+ _| |_ _ ____   ___ _| |_| |__  _   _  ____ ___   __| |_____  ___ 
+(_   _) |    \ / _ (_   _)  _ \| | | |/ ___) _ \ / _  | ___ |/___)
+  | |_| | | | | |_| || |_| | | | |_| ( (__| |_| ( (_| | ____|___ |
+   \__)_|_|_|_|\___/  \__)_| |_|\__  |\____)___/ \____|_____|___/ 
+                               (____/
+https:timothycodes.nl
+-->
+  <head>
+    {%- if jekyll.environment == "production" %}
+      {% if site.google %}
+        {%- include google-tag-manager-head.html gtm=site.google %}
+      {% endif %}
+    {%- endif %}
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no" name="viewport"/>
+    {%- seo %}
+  </head>
+  <body>
+    {%- if jekyll.environment == "production" %}
+      {%- if site.google %}
+        {%- include google-tag-manager-body.html gtm=site.google %}
+      {%- endif %}
+    {%- endif %}
+    {{- content -}}
+  </body>
+</html>
